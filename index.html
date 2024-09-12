@@ -8,18 +8,27 @@
     </head>
     <body>  
         <header class="main-header">
-            <h1>Welcome to Katik</h1>
-            <p>Hai Sobat selamat datang di Katik ^_^ </p>
+            <h1>MENGHITUNG LUAS BANGUN DATAR</h1>
+            <p></p>
             <p></p>
         </header>
 
         <main>
             <section class="selection-content selection-btn">
-                <button href="#" type="button" class="selection-btn bisque-color">Segitiga</button>
-                <button href="#" type="button" class="selection-btn aqua-color">Jajar Genjang</button>
+                <button href="#" type="button" class="selection-btn bisque-color">SEGITIGA</button>
+                <button href="#" type="button" onclick="tryDOM()" class="selection-btn aqua-color" id="jajar-genjang-btn">JAJAR GENJANG</button>
             </section>
 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
             <section class="main-content">
+
+                <!-- Left Side, Luas Segitiga -->
                 <aside>
                     <header>
                         <h1 class="luas-segitiga-header">Luas Segitiga</h1>
@@ -27,65 +36,97 @@
     
                     <article class="luas-segitiga-content">
                         <div class="luas-segitiga-img"></div>
-                        <p>Rumus Luas Segitiga</p>
+                        <p>Rumus:</p>
+                        <div class="formula-luas">
+                            <div class="formula">
+                                <span>Luas</span> = <span class="formula-symbol">½</span> * <span>Panjang alas (a)</span> * <span>Tinggi (t)</span>
+                            </div>
+                        </div>
                     </article>
-    
-                    <hr />
-    
-                    <form>
-                        <header>
-                            <h1 class="luas-segitiga-form-header">Hitung Luas Segitiga</h1>
-                        </header>
-                        
-                        <div class="input-wrapper">
-                            <label for="panjang-alas">Panjang Alas:</label>
-                            <input id="panjang-alas" type="number" />
+                    <br>
+                    <br>
+                    <form id="triangleForm">
+
+                        <div class="form-group">
+                            <label for="length"><i class="fa fa-length"></i> Panjang Alas</label>
+                            <input type="number" id="length" name="length" placeholder="Masukkan panjang alas">
+                            <small id="lengthError" class="error-message">Panjang alas tidak boleh kosong!</small>
                         </div>
-                        
-                        <div class="input-wrapper">
-                            <label for="tinggi">Tinggi:</label>
-                            <input id="tinggi" type="number" />
+                
+                        <div class="form-group">
+                            <label for="height"><i class="fa fa-height"></i> Tinggi</label>
+                            <input type="number" id="height" name="height" placeholder="Masukkan tinggi">
+                            <small id="heightError" class="error-message">Tinggi tidak boleh kosong!</small>
                         </div>
-    
-                        <p id="result">Hasil Perhitungan</p>
-    
-                        <button>Hitung</button>
+
+                        <br>
+
+                        <p class="hasilluas" id="luasResult"></p>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset" id="resetButton">Reset</button>
+                    
                     </form>
+                    </form>
+
+                    <br>
+                    <br>
+                    
                 </aside>
-    
+                
+                <!-- Right side, Keliling Segitiga -->
                 <aside>
                     <header>
-                        <h1 class="luas-segitiga-header">Luas Segitiga</h1>
+                        <h1 class="luas-segitiga-header">Keliling Segitiga</h1>
                     </header>
+
     
                     <article class="luas-segitiga-content">
                         <div class="luas-segitiga-img"></div>
-                        <p>Rumus Luas Segitiga</p>
+                        <p>Rumus:</p>
+                        <div class="formula-luas">
+                            <div class="formula">
+                                <span>Luas</span> = <span class="formula-symbol">Panjang alas (a)</span> + <span>Sisi 1 (s1)</span> + <span>Sisi 2 (s2)</span>
+                            </div>
+                        </div>
                     </article>
-    
-                    <hr />
-    
-                    <form>
-                        <header>
-                            <h1 class="luas-segitiga-form-header">Hitung Luas Segitiga</h1>
-                        </header>
-                        
-                        <div class="input-wrapper">
-                            <label for="panjang-alas">Panjang Alas:</label>
-                            <input id="panjang-alas" type="number" />
+                    
+                    <form id="triangleFormKel">
+
+                        <br>
+                        <br>
+
+                        <div class="form-group">
+                            <label for="lengthKel"><i class="fa fa-lengthKel"></i> Panjang Alas</label>
+                            <input type="number" id="lengthKel" name="lengthKel" placeholder="Masukkan panjang alas">
+                            <small id="lengthKelError" class="error-message">Panjang alas tidak boleh kosong!</small>
                         </div>
-                        
-                        <div class="input-wrapper">
-                            <label for="tinggi">Tinggi:</label>
-                            <input id="tinggi" type="number" />
+                
+                        <div class="form-group">
+                            <label for="heightKel"><i class="fa fa-heightKel"></i> Sisi 1</label>
+                            <input type="number" id="heightKel" name="heightKel" placeholder="Masukkan sisi 1">
+                            <small id="heightKelError" class="error-message">Sisi 1 tidak boleh kosong!</small>
                         </div>
-    
-                        <p id="result">Hasil Perhitungan</p>
-    
-                        <button>Hitung</button>
+
+                        <div class="form-group"></div>
+                            <label for="heightKel2"><i class="fa fa-heightKel2"></i> Sisi 2</label>
+                            <input type="number" id="heightKel2" name="heightKel2" placeholder="Masukkan sisi 2">
+                            <small id="heightKel2Error" class="error-message">Sisi 2 tidak boleh kosong!</small>
+                        </div>
+                        <br>
+                        <br>
+
+                        <p class="hasilkeliling" id="kelilingResult" ></p>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset" id="resetKelButton">Reset</button>
                     </form>
+                   
                 </aside>
             </section>
         </main>
+        
+        <!-- Connection to JavaScript -->
+        <script src="js\script.js"></script>
     </body>
 </html>

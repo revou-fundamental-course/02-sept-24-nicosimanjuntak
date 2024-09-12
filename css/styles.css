@@ -1,6 +1,7 @@
 /* Ini CSS */
 .main-header {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .selection-content {
@@ -16,17 +17,28 @@
 
 .bisque-color {
     background-color: bisque;
+    font-size: larger;
+    font-family: fantasy;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .aqua-color {
-    background-color: white;
+    background-color: rgb(156, 217, 95);
+    font-size: larger;
+    font-family: fantasy;
+    color: black;
+    font-size: larger;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .luas-segitiga-header {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: 0px;   
-    background: cornflowerblue;
+    background: rgb(100, 230, 237);
     text-align: center;
 }
 
@@ -46,6 +58,35 @@
 
 .luas-segitiga-form-header {
     text-align: center;
+    color: #FF4136;
+}
+
+/* Rumus segitiga */
+.formula-luas {
+    font-size: 1.2rem;
+    font-family: "Cambria", "Georgia", serif;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 2.5rem;
+}
+
+.formula {
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formula span {
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+}
+
+.formula-symbol {
+    color: #d35400;
+    font-weight: bold;
 }
 
 .input-wrapper {
@@ -68,10 +109,112 @@ input[type=number] {
     box-sizing: border-box;
 }
 
+/* Style for desktops */
 .main-content {
     display: flex;
 }
 
 .main-content>aside {
     flex: 1;
+}
+
+@media only screen and (max-width: 480px){
+    .main-content{
+        flex-direction: column;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+input.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #FF4136;
+}
+
+button[type="resetKel"] {
+    background-color: #FF4136;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"]:hover {
+    background-color: #c70000;
+}
+
+button[type="resetKel"]:hover {
+    background-color: #c70000;
+}
+
+label i {
+    margin-right: 5px;
+}
+
+input:focus {
+    border-color: #007BFF;
+}
+
+.hasilluas {
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.hasilkeliling {
+    font-size: xx-large;
+    margin-top: 10px;
 }
