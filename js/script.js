@@ -5,6 +5,18 @@ function tryDOM() {
     document.getElementById('jajar-genjang-btn').style.backgroundColor = 'cadetblue';
 }
 
+// Link ke Jajar genjang
+// Fungsi untuk menggulir ke section Jajar Genjang
+function scrollToSection() {
+    document.querySelector(".second-content").scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+// Event listener untuk tombol Jajar Genjang
+document.getElementById("jajar-genjang-btn").addEventListener("click", scrollToSection);
+
+
 // untuk submit luas segitiga
 document.getElementById('triangleForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Mencegah submit form
