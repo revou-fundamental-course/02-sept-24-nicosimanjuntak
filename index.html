@@ -26,6 +26,7 @@
             <br>
             <br>
 
+            <!-- Content untuk Segitiga -->
             <section class="main-content">
 
                 <!-- Left Side, Luas Segitiga -->
@@ -70,8 +71,7 @@
                     </form>
 
                     <br>
-                    <br>
-                    
+
                 </aside>
                 
                 <!-- Right side, Keliling Segitiga -->
@@ -86,7 +86,7 @@
                         <p>Rumus:</p>
                         <div class="formula-luas">
                             <div class="formula">
-                                <span>Luas</span> = <span class="formula-symbol">Panjang alas (a)</span> + <span>Sisi 1 (s1)</span> + <span>Sisi 2 (s2)</span>
+                                <span>Keliling</span> = <span class="formula-symbol">Panjang alas (a)</span> + <span>Sisi 1 (s1)</span> + <span>Sisi 2 (s2)</span>
                             </div>
                         </div>
                     </article>
@@ -120,6 +120,101 @@
 
                         <button type="submit">Submit</button>
                         <button type="reset" id="resetKelButton">Reset</button>
+                    </form>
+                   
+                </aside>
+            </section>
+            <br>
+            <br>
+
+            <!-- Content untuk Jajar Genjang -->
+            <section class="second-content">
+                <!-- Left Side, Luas Jajar genjang -->
+                <aside>
+                    <header>
+                        <h1 class="luas-jajargenjang-header">Luas Jajar Genjang</h1>
+                    </header>
+    
+                    <article class="luas-jajargenjang-content">
+                        <div class="luas-jajargenjang-img"></div>
+                        <p>Rumus:</p>
+                        <div class="formula-luas">
+                            <div class="formula">
+                                <span>Luas</span> = <span class="formula-symbol">Sisi alas  </span> * <span>Tinggi </span>
+                            </div>
+                        </div>
+                    </article>
+                    <br>
+                    <br>
+                    <form id="jajargenjangForm">
+
+                        <div class="form-group">
+                            <label for="lengthluasjar"><i class="fa fa-lengthluasjar"></i> Sisi Alas</label>
+                            <input type="number" id="lengthluasjar" name="lengthluasjar" placeholder="Masukkan sisi alas">
+                            <small id="lengthluasjarError" class="error-message">Panjang alas tidak boleh kosong!</small>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="heightluasjar"><i class="fa fa-heightluasjar"></i> Tinggi</label>
+                            <input type="number" id="heightluasjar" name="heightluasjar" placeholder="Masukkan tinggi">
+                            <small id="heightluasjarError" class="error-message">Tinggi tidak boleh kosong!</small>
+                        </div>
+
+                        <br>
+
+                        <p class="hasilluasjar" id="luasjarResult"></p>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset" id="resetluasjarButton">Reset</button>
+                    
+                    </form>
+                    </form>
+
+                    <br>
+                    <br>
+                    
+                </aside>
+                
+                <!-- Right side, Keliling Jajar Genjang -->
+                <aside>
+                    <header>
+                        <h1 class="luas-jajargenjang-header">Keliling Jajar Genjang</h1>
+                    </header>
+
+    
+                    <article class="luas-jajargenjang-content">
+                        <div class="luas-jajargenjang-img"></div>
+                        <p>Rumus:</p>
+                        <div class="formula-luas">
+                            <div class="formula">
+                                <span>Keliling</span> = <span class="formula-symbol">(Sisi AB * 2 )</span> + <span>(Sisi BC * 2)</span> 
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <form id="kelilingjajarForm">
+
+                        <br>
+                        <br>
+
+                        <div class="form-group">
+                            <label for="lengthkeljar"><i class="fa fa-lengthkeljar"></i> Sisi AB</label>
+                            <input type="number" id="lengthkeljar" name="lengthkeljar" placeholder="Masukkan sisi AB">
+                            <small id="lengthkeljarError" class="error-message">Panjang alas tidak boleh kosong!</small>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="heightkeljar"><i class="fa fa-heightkeljar"></i> Sisi BC</label>
+                            <input type="number" id="heightkeljar" name="heightkeljar" placeholder="Masukkan sisi BC">
+                            <small id="heightkeljarError" class="error-message">Sisi 1 tidak boleh kosong!</small>
+                        </div>
+
+                        <br>
+
+                        <p class="hasilkelilingjar" id="keljarResult" ></p>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset" id="resetkeljarButton">Reset</button>
                     </form>
                    
                 </aside>

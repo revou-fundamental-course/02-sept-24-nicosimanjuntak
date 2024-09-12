@@ -42,7 +42,20 @@
     text-align: center;
 }
 
+.luas-jajargenjang-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px;   
+    background: rgb(100, 230, 237);
+    text-align: center;
+}
+
 .luas-segitiga-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.luas-jajargenjang-content {
     display: flex;
     flex-direction: column;
 }
@@ -51,6 +64,15 @@
     height: 300px;
     width: 300px;
     background-image: url(https://asset.kompas.com/crops/ZwOr6ZrEtAtid5uZmYhDFijYPa4=/175x161:1573x1094/750x500/data/photo/2022/03/09/62288763c6d64.png);
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+}
+
+.luas-jajargenjang-img {
+    height: 300px;
+    width: 500px;
+    background-image: url(https://cdn-brilio-net.akamaized.net/real/2023/08/31/2100309/rumus-jajar-genjang-dan-contoh-soalnya.jpg);
     background-size: cover;
     background-position: center;
     align-self: center;
@@ -109,7 +131,7 @@ input[type=number] {
     box-sizing: border-box;
 }
 
-/* Style for desktops */
+/* Style for main content */
 .main-content {
     display: flex;
 }
@@ -118,8 +140,24 @@ input[type=number] {
     flex: 1;
 }
 
+/* Style for 480px display */
 @media only screen and (max-width: 480px){
     .main-content{
+        flex-direction: column;
+    }
+}
+
+/* Style for second content */
+.second-content {
+    display: flex;
+}
+
+.second-content>aside {
+    flex: 1;
+}
+
+@media only screen and (max-width: 480px){
+    .second-content{
         flex-direction: column;
     }
 }
@@ -215,6 +253,16 @@ input:focus {
 }
 
 .hasilkeliling {
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.hasilluasjar {
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.hasilkelilingjar {
     font-size: xx-large;
     margin-top: 10px;
 }

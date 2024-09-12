@@ -1,9 +1,11 @@
 // Ini JavaScript
 
+// untuk button pilihan segitiga dan jajar genjang
 function tryDOM() {
     document.getElementById('jajar-genjang-btn').style.backgroundColor = 'cadetblue';
 }
 
+// untuk submit luas segitiga
 document.getElementById('triangleForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Mencegah submit form
 
@@ -145,4 +147,124 @@ document.getElementById('triangleFormKel').addEventListener('submit', function (
         kelilingResult.textContent = `Keliling Segitiga: ${keliling}`;
         kelilingResult.style.color = "black";
     }
+});
+
+
+
+// untuk fungsi luas dan keliling jajar genjang
+
+// Menghitung luas jajar genjang
+document.getElementById('jajargenjangForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Retrieve input elements and error message elements
+    const lengthluasjar = parseFloat(document.getElementById('lengthluasjar').value);
+    const heightluasjar = parseFloat(document.getElementById('heightluasjar').value);
+    const luasjarResult = document.getElementById('luasjarResult');
+    const lengthluasjarError = document.getElementById('lengthluasjarError');
+    const heightluasjarError = document.getElementById('heightluasjarError');
+
+    let isValid = true;
+
+    // Validate 'base' input
+    if (isNaN(lengthluasjar) || lengthluasjar <= 0) {
+        lengthluasjarError.style.display = 'block';
+        document.getElementById('lengthluasjar').classList.add('error');
+        isValid = false;
+    } else {
+        lengthluasjarError.style.display = 'none';
+        document.getElementById('lengthluasjar').classList.remove('error');
+    }
+
+    // Validate 'height' input
+    if (isNaN(heightluasjar) || heightluasjar <= 0) {
+        heightluasjarError.style.display = 'block';
+        document.getElementById('heightluasjar').classList.add('error');
+        isValid = false;
+    } else {
+        heightluasjarError.style.display = 'none';
+        document.getElementById('heightluasjar').classList.remove('error');
+    }
+
+    // If all inputs are valid, calculate the area
+    if (isValid) {
+        const luasjar = lengthluasjar * heightluasjar; // Correct formula for the area of a parallelogram
+        luasjarResult.textContent = `Luas Jajar Genjang: ${luasjar}`;
+        luasjarResult.style.color = "black";
+    } else {
+        luasjarResult.textContent = "Please enter valid numbers for both dimensions.";
+        luasjarResult.style.color = "red";
+    }
+});
+
+// Button reset functionality for clearing inputs and error messages
+document.getElementById("resetluasjarButton").addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input');
+    const errorMessages = document.querySelectorAll('.error-message');
+
+    inputs.forEach(input => {
+        input.classList.remove('error');
+        input.value = ''; // Clear input values as well
+    });
+    errorMessages.forEach(error => error.style.display = 'none');
+});
+
+
+// Menghitung keliling jajar genjang
+document.getElementById('kelilingjajarForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // input element
+    const lengthkeljar = parseFloat(document.getElementById('lengthkeljar').value);
+    const heightkeljar = parseFloat(document.getElementById('heightkeljar').value);
+    const keljarResult = document.getElementById('keljarResult');
+    const lengthkeljarError = document.getElementById('lengthkeljarError');
+    const heightkeljarError = document.getElementById('heightkeljarError');
+
+    let isValid = true;
+
+    // Validate 'base' input
+    if (isNaN(lengthkeljar) || lengthkeljar <= 0) {
+        lengthkeljarError.style.display = 'block';
+        document.getElementById('lengthkeljar').classList.add('error');
+        isValid = false;
+    } else {
+        lengthkeljarError.style.display = 'none';
+        document.getElementById('lengthkeljar').classList.remove('error');
+    }
+
+    // Validate 'height' input
+    if (isNaN(heightkeljar) || heightkeljar <= 0) {
+        heightkeljarError.style.display = 'block';
+        document.getElementById('heightkeljar').classList.add('error');
+        isValid = false;
+    } else {
+        heightkeljarError.style.display = 'none';
+        document.getElementById('heightkeljar').classList.remove('error');
+    }
+
+    // If all inputs are valid, calculate the area
+    if (isValid) {
+        const keljar = 2 * (lengthkeljar + heightkeljar); 
+        keljarResult.textContent = `Keliling Jajar Genjang: ${keljar}`;
+        keljarResult.style.color = "black";
+    } else {
+        keljarResult.textContent = "Please enter valid numbers for both dimensions.";
+        jarResult.style.color = "red";
+    }
+
+    
+});
+
+
+// Button Reset Keliling
+document.getElementById("resetkeljarButton").addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input');
+    const errorMessages = document.querySelectorAll('.error-message');
+
+    inputs.forEach(input => {
+        input.classList.remove('error');
+        input.value = ''; // Clear input values as well
+    });
+    errorMessages.forEach(error => error.style.display = 'none');
 });
